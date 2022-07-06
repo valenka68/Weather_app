@@ -8,9 +8,10 @@ import com.example.valentinabulanova.weatherappcourse.databinding.ListItemBindin
 class WeatherAdapter: ListAdapter <WeatherModel, WeatherAdapter.Holder> () {
     class Holder(view: View):RecyclerView.ViewHolder(view) {
         val binding = ListItemBinding.bind(view)
-        fun bind(item: WeatherModel) = with(binding){
+        fun bind(item: WeatherModel) = with(binding) {
             tvDate.text = item.time
             tvCondition.text = item.condition
             tvTemp.text = item.currentTemp
         }
+    }
 }
